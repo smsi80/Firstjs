@@ -480,6 +480,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: 150px 50px;
 }
 
+.grid-cols-\[150px_150px\] {
+  grid-template-columns: 150px 150px;
+}
+
 .grid-rows-\[50px_50px_50px_50px\] {
   grid-template-rows: 50px 50px 50px 50px;
 }
