@@ -43,5 +43,25 @@ function moadelCac(nomreha) {
   for (let i = 0; i < nomreha.length; i++) {
     moadel += nomreha[i];
   }
-  return moadel / nomreha.length;
+  return (moadel / nomreha.length).toFixed(2);
 }
+document.querySelector("#showmoadel").addEventListener("click", function () {
+  if (
+    nomreha.length > 0 &&
+    esmha.length > 0 &&
+    document.querySelector("#moadelOverlay").classList.contains("hidden")
+  ) {
+    document.querySelector("#moadelOverlay").classList.remove("hidden");
+  } else if (
+    !document.querySelector("#moadelOverlay").classList.contains("hidden")
+  ) {
+    document.querySelector("#moadelOverlay").classList.add("hidden");
+  } else {
+    document.querySelector("#alert").textContent =
+      "لطفا اول نمره و اسم درس را وارد کنید";
+    document.querySelector("#alert").style.color = "red";
+  }
+});
+document.querySelector("#closeOverlay").addEventListener("click", function () {
+  document.querySelector("#moadelOverlay").classList.add("hidden");
+});

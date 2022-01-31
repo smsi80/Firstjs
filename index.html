@@ -10,7 +10,7 @@
   <body id="body" class="bg-stone-600">
     <h1 id="alert" class="text-center"></h1>
     <div
-      class="justify-center items-center text-center grid grid-cols-[150px_50px] grid-rows-[50px_50px_50px_50px] h-screen gap-x-2"
+      class="justify-center items-center text-center grid grid-cols-[150px_50px] grid-rows-[50px_50px_50px_50px] gap-x-2"
     >
       <label for="name" class="text-white">اسم درس</label>
       <label for="nomreh" class="text-white">نمره</label>
@@ -19,15 +19,36 @@
       <button id="save" class="rounded-3xl border-4 border-yellow-500 bg-white">
         ذخیره
       </button>
+      <button
+        id="showmoadel"
+        class="rounded-2xl border-4 border-yellow-500 bg-white row-start-4"
+      >
+        نمایش معدل
+      </button>
       <div class="text-white">
         <h2 id="esmedars"></h2>
         <h2 id="nomrehdars"></h2>
       </div>
-      <div>
-        <h2 class="text-white font-bold" id="moadel">معدل برابر است با:</h2>
-      </div>
     </div>
-
+    <div
+      id="moadelOverlay"
+      class="flex justify-center items-start w-96 h-14 mx-auto bg-red-800 rounded-3xl relative hidden"
+    >
+      <ion-icon
+      id="closeOverlay"
+        class="text-white font-bold h-7 w-7 absolute right-2 cursor-pointer"
+        name="close-outline"
+      ></ion-icon>
+      <h2 class="text-white font-bold" id="moadel">معدل برابر است با:</h2>
+    </div>
     <script src="./src/js.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
